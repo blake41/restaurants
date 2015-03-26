@@ -1,0 +1,9 @@
+<%= form_for(@reservation) do |f| %>
+  
+  <%= f.collection_select(:id, Restaurant.all, :id, :name) %>
+  <%= f.label(:client_id) %>
+  <%= f.text_field(:client_id) %>
+  <%= f.label(:res_time) %>
+  <%= f.text_field(:res_time) %>
+  <%= f.submit %>
+<% end %>
